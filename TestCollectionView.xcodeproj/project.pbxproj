@@ -15,6 +15,9 @@
 		222E565E2382E22200E1EF5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 222E565C2382E22200E1EF5F /* LaunchScreen.storyboard */; };
 		2264409A238A6FC6008B7CBB /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22644098238A6FC6008B7CBB /* TableViewCell.swift */; };
 		2264409B238A6FC6008B7CBB /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22644099238A6FC6008B7CBB /* TableViewCell.xib */; };
+		2264409E238A7C49008B7CBB /* CollectionViewBasedMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2264409D238A7C49008B7CBB /* CollectionViewBasedMenuVC.swift */; };
+		226440A4238A806D008B7CBB /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226440A2238A806D008B7CBB /* CollectionViewCell.swift */; };
+		226440A5238A806D008B7CBB /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 226440A3238A806D008B7CBB /* CollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		222E565F2382E22200E1EF5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22644098238A6FC6008B7CBB /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		22644099238A6FC6008B7CBB /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		2264409D238A7C49008B7CBB /* CollectionViewBasedMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewBasedMenuVC.swift; sourceTree = "<group>"; };
+		226440A2238A806D008B7CBB /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		226440A3238A806D008B7CBB /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +66,10 @@
 		222E56502382E22000E1EF5F /* TestCollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				2264409F238A7D38008B7CBB /* TableViewBasedMenuVC */,
+				2264409C238A7C1C008B7CBB /* CollectionViewBasedMenuVC */,
 				222E56512382E22000E1EF5F /* AppDelegate.swift */,
 				222E56532382E22000E1EF5F /* SceneDelegate.swift */,
-				222E56552382E22000E1EF5F /* ViewController.swift */,
 				222E56572382E22000E1EF5F /* Main.storyboard */,
 				222E565A2382E22200E1EF5F /* Assets.xcassets */,
 				222E565C2382E22200E1EF5F /* LaunchScreen.storyboard */,
@@ -71,6 +78,24 @@
 				22644099238A6FC6008B7CBB /* TableViewCell.xib */,
 			);
 			path = TestCollectionView;
+			sourceTree = "<group>";
+		};
+		2264409C238A7C1C008B7CBB /* CollectionViewBasedMenuVC */ = {
+			isa = PBXGroup;
+			children = (
+				2264409D238A7C49008B7CBB /* CollectionViewBasedMenuVC.swift */,
+				226440A2238A806D008B7CBB /* CollectionViewCell.swift */,
+				226440A3238A806D008B7CBB /* CollectionViewCell.xib */,
+			);
+			path = CollectionViewBasedMenuVC;
+			sourceTree = "<group>";
+		};
+		2264409F238A7D38008B7CBB /* TableViewBasedMenuVC */ = {
+			isa = PBXGroup;
+			children = (
+				222E56552382E22000E1EF5F /* ViewController.swift */,
+			);
+			path = TableViewBasedMenuVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,6 +160,7 @@
 				2264409B238A6FC6008B7CBB /* TableViewCell.xib in Resources */,
 				222E565B2382E22200E1EF5F /* Assets.xcassets in Resources */,
 				222E56592382E22000E1EF5F /* Main.storyboard in Resources */,
+				226440A5238A806D008B7CBB /* CollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,7 +171,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2264409E238A7C49008B7CBB /* CollectionViewBasedMenuVC.swift in Sources */,
 				222E56562382E22000E1EF5F /* ViewController.swift in Sources */,
+				226440A4238A806D008B7CBB /* CollectionViewCell.swift in Sources */,
 				2264409A238A6FC6008B7CBB /* TableViewCell.swift in Sources */,
 				222E56522382E22000E1EF5F /* AppDelegate.swift in Sources */,
 				222E56542382E22000E1EF5F /* SceneDelegate.swift in Sources */,
