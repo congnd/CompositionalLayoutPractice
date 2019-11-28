@@ -29,11 +29,11 @@ extension CollectionViewBasedMenuVC {
         collectionView.backgroundColor = .systemBackground
         collectionView.delegate = self
         collectionView.register(UINib(nibName: "CollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CollectionViewCell")
-        self.outlineCollectionView = collectionView
+        outlineCollectionView = collectionView
     }
 
     func configureDataSource() {
-        self.dataSource = .init(collectionView: outlineCollectionView) { collectionView, indexPath, menuItem -> UICollectionViewCell? in
+        dataSource = .init(collectionView: outlineCollectionView) { collectionView, indexPath, menuItem -> UICollectionViewCell? in
             guard let cell = collectionView.dequeueReusableCell(
                 withReuseIdentifier: "CollectionViewCell",
                 for: indexPath) as? CollectionViewCell else { fatalError("Could not create new cell") }
@@ -44,7 +44,7 @@ extension CollectionViewBasedMenuVC {
 
         // load our initial data
         let snapshot = snapshotForCurrentState()
-        self.dataSource.apply(snapshot, animatingDifferences: false)
+        dataSource.apply(snapshot, animatingDifferences: false)
     }
 
     func generateLayout() -> UICollectionViewLayout {
@@ -86,11 +86,18 @@ extension CollectionViewBasedMenuVC {
 
 extension CollectionViewBasedMenuVC: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let menuItem = self.dataSource.itemIdentifier(for: indexPath) else { return }
+        guard let menuItem = dataSource.itemIdentifier(for: indexPath) else { return }
 
         collectionView.deselectItem(at: indexPath, animated: true)
-        menuItem.isExpanded.toggle()
-
-        self.updateUI()
+        
+        if menuItem.subItems.isEmpty {
+            if let sceneClass = menuItem.sceneClass {
+                let orthogonalSectionsVC = sceneClass.init(nibName: String(describing: sceneClass), bundle: nil)
+                show(orthogonalSectionsVC, sender: nil)
+            }
+        } else {
+            menuItem.isExpanded.toggle()
+            updateUI()
+        }
     }
 }

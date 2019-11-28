@@ -26,12 +26,14 @@ class Item: Hashable {
     let title: String
     let level: Int
     let subItems: [Item]
+    let sceneClass: UIViewController.Type?
     var isExpanded = false
     
-    init(title: String, level: Int, subItems: [Item]) {
+    init(title: String, level: Int, subItems: [Item], sceneClass: UIViewController.Type? = nil) {
         self.title = title
         self.level = level
         self.subItems = subItems
+        self.sceneClass = sceneClass
     }
 }
 
@@ -39,7 +41,7 @@ let items: [Item] = [
     Item(title: "Compositional Layout", level: 0, subItems: [
         Item(title: "Orthogonal Sections", level: 1, subItems: [
             Item(title: "Orthogonal Sections", level: 2, subItems: []),
-            Item(title: "Orthogonal Section Behaviors", level: 2, subItems: []),
+            Item(title: "Orthogonal Section Behaviors", level: 2, subItems: [], sceneClass: OrthogonalSectionsVC.self),
         ])
     ]),
     Item(title: "Diffable Data Source", level: 0, subItems: [
@@ -88,10 +90,17 @@ extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        guard let item = dataSource?.itemIdentifier(for: indexPath) else { return }
-        item.isExpanded.toggle()
+        guard let menuItem = dataSource?.itemIdentifier(for: indexPath) else { return }
         
-        let snapshot = self.createSnapshot()
-        self.dataSource?.apply(snapshot, animatingDifferences: true)
+        if menuItem.subItems.isEmpty {
+            if let sceneClass = menuItem.sceneClass {
+                let orthogonalSectionsVC = sceneClass.init(nibName: String(describing: sceneClass), bundle: nil)
+                show(orthogonalSectionsVC, sender: nil)
+            }
+        } else {
+            menuItem.isExpanded.toggle()
+            let snapshot = createSnapshot()
+            dataSource?.apply(snapshot, animatingDifferences: true)
+        }
     }
 }

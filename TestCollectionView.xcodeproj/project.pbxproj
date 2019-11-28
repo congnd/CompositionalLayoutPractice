@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22087B81238EBF4500307BE8 /* OrthogonalSectionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22087B7F238EBF4500307BE8 /* OrthogonalSectionsVC.swift */; };
+		22087B82238EBF4500307BE8 /* OrthogonalSectionsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22087B80238EBF4500307BE8 /* OrthogonalSectionsVC.xib */; };
 		222E56522382E22000E1EF5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222E56512382E22000E1EF5F /* AppDelegate.swift */; };
 		222E56542382E22000E1EF5F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222E56532382E22000E1EF5F /* SceneDelegate.swift */; };
 		222E56562382E22000E1EF5F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222E56552382E22000E1EF5F /* ViewController.swift */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		22087B7F238EBF4500307BE8 /* OrthogonalSectionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrthogonalSectionsVC.swift; sourceTree = "<group>"; };
+		22087B80238EBF4500307BE8 /* OrthogonalSectionsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrthogonalSectionsVC.xib; sourceTree = "<group>"; };
 		222E564E2382E22000E1EF5F /* TestCollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestCollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		222E56512382E22000E1EF5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		222E56532382E22000E1EF5F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +51,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		22087B7E238EBEBA00307BE8 /* OthogonalSections */ = {
+			isa = PBXGroup;
+			children = (
+				22087B7F238EBF4500307BE8 /* OrthogonalSectionsVC.swift */,
+				22087B80238EBF4500307BE8 /* OrthogonalSectionsVC.xib */,
+			);
+			path = OthogonalSections;
+			sourceTree = "<group>";
+		};
 		222E56452382E22000E1EF5F = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +79,7 @@
 		222E56502382E22000E1EF5F /* TestCollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				22087B7E238EBEBA00307BE8 /* OthogonalSections */,
 				2264409F238A7D38008B7CBB /* TableViewBasedMenuVC */,
 				2264409C238A7C1C008B7CBB /* CollectionViewBasedMenuVC */,
 				222E56512382E22000E1EF5F /* AppDelegate.swift */,
@@ -157,6 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				222E565E2382E22200E1EF5F /* LaunchScreen.storyboard in Resources */,
+				22087B82238EBF4500307BE8 /* OrthogonalSectionsVC.xib in Resources */,
 				2264409B238A6FC6008B7CBB /* TableViewCell.xib in Resources */,
 				222E565B2382E22200E1EF5F /* Assets.xcassets in Resources */,
 				222E56592382E22000E1EF5F /* Main.storyboard in Resources */,
@@ -173,6 +188,7 @@
 			files = (
 				2264409E238A7C49008B7CBB /* CollectionViewBasedMenuVC.swift in Sources */,
 				222E56562382E22000E1EF5F /* ViewController.swift in Sources */,
+				22087B81238EBF4500307BE8 /* OrthogonalSectionsVC.swift in Sources */,
 				226440A4238A806D008B7CBB /* CollectionViewCell.swift in Sources */,
 				2264409A238A6FC6008B7CBB /* TableViewCell.swift in Sources */,
 				222E56522382E22000E1EF5F /* AppDelegate.swift in Sources */,
