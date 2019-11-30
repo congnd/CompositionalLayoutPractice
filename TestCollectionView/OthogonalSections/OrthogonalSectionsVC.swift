@@ -14,7 +14,7 @@ class OrthogonalSectionsVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "Orthogonal Sections"
+        title = "Orthogonal Sections"
         
         configHierarchy()
         configDataSource()
