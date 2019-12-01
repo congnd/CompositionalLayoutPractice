@@ -15,6 +15,8 @@
 		222E56592382E22000E1EF5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 222E56572382E22000E1EF5F /* Main.storyboard */; };
 		222E565B2382E22200E1EF5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 222E565A2382E22200E1EF5F /* Assets.xcassets */; };
 		222E565E2382E22200E1EF5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 222E565C2382E22200E1EF5F /* LaunchScreen.storyboard */; };
+		2263677D23933E8700E59365 /* AdaptiveSectionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2263677B23933E8700E59365 /* AdaptiveSectionsVC.swift */; };
+		2263677E23933E8700E59365 /* AdaptiveSectionsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2263677C23933E8700E59365 /* AdaptiveSectionsVC.xib */; };
 		2264409A238A6FC6008B7CBB /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22644098238A6FC6008B7CBB /* TableViewCell.swift */; };
 		2264409B238A6FC6008B7CBB /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22644099238A6FC6008B7CBB /* TableViewCell.xib */; };
 		2264409E238A7C49008B7CBB /* CollectionViewBasedMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2264409D238A7C49008B7CBB /* CollectionViewBasedMenuVC.swift */; };
@@ -33,6 +35,8 @@
 		222E565A2382E22200E1EF5F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		222E565D2382E22200E1EF5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		222E565F2382E22200E1EF5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2263677B23933E8700E59365 /* AdaptiveSectionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptiveSectionsVC.swift; sourceTree = "<group>"; };
+		2263677C23933E8700E59365 /* AdaptiveSectionsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdaptiveSectionsVC.xib; sourceTree = "<group>"; };
 		22644098238A6FC6008B7CBB /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		22644099238A6FC6008B7CBB /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		2264409D238A7C49008B7CBB /* CollectionViewBasedMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewBasedMenuVC.swift; sourceTree = "<group>"; };
@@ -79,6 +83,7 @@
 		222E56502382E22000E1EF5F /* TestCollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				2263677A23933E6400E59365 /* Adaptive Sections */,
 				22087B7E238EBEBA00307BE8 /* OthogonalSections */,
 				2264409F238A7D38008B7CBB /* TableViewBasedMenuVC */,
 				2264409C238A7C1C008B7CBB /* CollectionViewBasedMenuVC */,
@@ -92,6 +97,15 @@
 				22644099238A6FC6008B7CBB /* TableViewCell.xib */,
 			);
 			path = TestCollectionView;
+			sourceTree = "<group>";
+		};
+		2263677A23933E6400E59365 /* Adaptive Sections */ = {
+			isa = PBXGroup;
+			children = (
+				2263677B23933E8700E59365 /* AdaptiveSectionsVC.swift */,
+				2263677C23933E8700E59365 /* AdaptiveSectionsVC.xib */,
+			);
+			path = "Adaptive Sections";
 			sourceTree = "<group>";
 		};
 		2264409C238A7C1C008B7CBB /* CollectionViewBasedMenuVC */ = {
@@ -171,6 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				222E565E2382E22200E1EF5F /* LaunchScreen.storyboard in Resources */,
+				2263677E23933E8700E59365 /* AdaptiveSectionsVC.xib in Resources */,
 				22087B82238EBF4500307BE8 /* OrthogonalSectionsVC.xib in Resources */,
 				2264409B238A6FC6008B7CBB /* TableViewCell.xib in Resources */,
 				222E565B2382E22200E1EF5F /* Assets.xcassets in Resources */,
@@ -188,6 +203,7 @@
 			files = (
 				2264409E238A7C49008B7CBB /* CollectionViewBasedMenuVC.swift in Sources */,
 				222E56562382E22000E1EF5F /* ViewController.swift in Sources */,
+				2263677D23933E8700E59365 /* AdaptiveSectionsVC.swift in Sources */,
 				22087B81238EBF4500307BE8 /* OrthogonalSectionsVC.swift in Sources */,
 				226440A4238A806D008B7CBB /* CollectionViewCell.swift in Sources */,
 				2264409A238A6FC6008B7CBB /* TableViewCell.swift in Sources */,
