@@ -42,13 +42,10 @@ let items: [Item] = [
         Item(title: "Adaptive Section", level: 1, subItems: [], sceneClass: AdaptiveSectionsVC.self),
         Item(title: "Suplementary Views", level: 1, subItems: [], sceneClass: SuplementaryViewsVC.self),
         Item(title: "Orthogonal Sections", level: 1, subItems: [
-            Item(title: "Orthogonal Sections", level: 2, subItems: []),
             Item(title: "Orthogonal Section Behaviors", level: 2, subItems: [], sceneClass: OrthogonalSectionsVC.self),
         ])
     ]),
     Item(title: "Diffable Data Source", level: 0, subItems: [
-        Item(title: "Mountains Search Sections", level: 1, subItems: []),
-        Item(title: "Search: Wi-Fi", level: 1, subItems: []),
         Item(title: "Sort Visualizer", level: 1, subItems: [], sceneClass: SortVisualizerVC.self),
     ])
 ]
