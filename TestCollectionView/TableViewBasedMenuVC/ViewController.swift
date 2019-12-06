@@ -49,6 +49,7 @@ let items: [Item] = [
     Item(title: "Diffable Data Source", level: 0, subItems: [
         Item(title: "Mountains Search Sections", level: 1, subItems: []),
         Item(title: "Search: Wi-Fi", level: 1, subItems: []),
+        Item(title: "Sort Visualizer", level: 1, subItems: [], sceneClass: SortVisualizerVC.self),
     ])
 ]
 
